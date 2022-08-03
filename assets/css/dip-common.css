@@ -1,0 +1,133 @@
+﻿/*body {*/
+/*}*/
+
+
+/*!*region For Layout*!*/
+/*.navbar-light .navbar-nav .nav-link {*/
+/*    color: rgb(255, 255, 255) !important;*/
+/*    padding-left: 2px;*/
+/*    padding-right: 2px;*/
+/*}*/
+
+/*    .navbar-light .navbar-nav .nav-link .nav-link-users {*/
+/*        font-weight: bold;*/
+/*        color: rgb(255, 255, 0) !important;*/
+/*    }*/
+
+/*.layout-navbar-fixed .wrapper .content-wrapper {*/
+/*    margin-top: calc(3.5rem + 1px);*/
+/*    !*margin-top: calc(3.5rem + 1px);*!*/
+/*}*/
+
+/*.layout-navbar-fixed.layout-fixed .wrapper .sidebar {*/
+/*    margin-top: calc(3.5rem + 1px) !important;*/
+/*}*/
+
+/*.content-header {*/
+/*    padding: 0px .5rem;*/
+/*}*/
+/*!*endregion*!*/
+
+/*!*region For DataTable*!*/
+/*.center-text-grid {*/
+/*    text-align: center;*/
+/*    vertical-align: middle;*/
+/*}*/
+
+/*.right-text-grid {*/
+/*    text-align: right;*/
+/*    vertical-align: middle;*/
+/*}*/
+
+/*.left-text-grid {*/
+/*    text-align: left;*/
+/*    vertical-align: middle;*/
+/*}*/
+
+/*.customDataTables {*/
+/*    width: 100% !important;*/
+/*}*/
+
+/*div.dataTables_wrapper div.dataTables_paginate {*/
+/*    margin-top: -20px !important;*/
+/*}*/
+
+/*div.dataTables_wrapper div.dataTables_info {*/
+/*    padding-top: 0px !important;*/
+/*}*/
+
+/*!*endregion*!*/
+
+/*!*region For Card*!*/
+/*.card-header {*/
+/*    padding: 4px;*/
+/*    background: linear-gradient(0deg, rgb(249, 248, 248) 46%, rgb(255, 255, 255) 96%);*/
+/*}*/
+
+/*!*endregion*!*/
+
+/*!*region For Form*!*/
+/*.form-horizontal .control-label {*/
+/*    text-align: left;*/
+/*    padding-top: 7px;*/
+/*    padding-left: 0px;*/
+/*    padding-right: 0px;*/
+/*    margin-bottom: 0px !important;*/
+/*}*/
+
+/*label.content-field {*/
+/*    font-weight: normal;*/
+/*}*/
+
+/*.form-group {*/
+/*    margin-bottom: 5px;*/
+/*}*/
+
+
+/*!*endregion*!*/
+
+/*label {*/
+/*    font-weight: 500 !important;*/
+/*    font-size: .85rem;*/
+/*}*/
+
+
+/*.btn-group .dropdown-menu {*/
+/*    padding-top:0px;*/
+/*    padding-bottom:0px;*/
+/*}*/
+
+/*#headerinfo {*/
+/*    background-color:aqua;*/
+/*}*/
+
+/*.br-container {*/
+/*    margin: 1px 0px 2px 7.1px;*/
+/*}*/
+/*#br-container {*/
+/*    text-align: right;*/
+/*    padding-right: 15px;*/
+/*    font-size: 13px;*/
+/*    margin-top: 2px;*/
+/*}*/
+
+/*#page-title {*/
+/*    color: #FFF;*/
+/*    font-weight: bold;*/
+/*    background-image: linear-gradient(to left, #f4f6f9, #025c9a, #025c9a, #025c9a);*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+/*!* ========================================================== *!*/
+/*!* DATA TABLE *!*/
+/*!* ========================================================== *!*/
+/*table.dtTables thead tr th,*/
+/*table.dip-dtTables thead tr th {*/
+/*    text-align: center !important;*/
+/*    padding: .5rem;*/
+/*    background-color: #99c0dc;*/
+/*}*/
+
+/*table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {*/
+/*    bottom: 0.7em;*/
+/*}*/

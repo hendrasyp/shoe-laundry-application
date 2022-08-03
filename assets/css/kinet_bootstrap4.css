@@ -1,0 +1,152 @@
+tfoot tr > th.dt-body-right {
+    border-top: 1px;
+    border-top-style: dotted;
+    text-align: right;
+    margin-right: 0px;
+    padding-right: 3px;
+}
+tr.writeInRed td.dt-body-right{
+    color: red;
+}
+tr.writeInRed td.dt-body-right:before{
+    content: "( ";
+}
+tr.writeInRed td.dt-body-right:after{
+    content: " )";
+}
+
+table.dataTable tbody th.dt-body-right,
+table.dataTable tbody td.dt-body-right {
+    text-align: right;
+}
+table.dataTable tbody th.dt-body-center,
+table.dataTable tbody td.dt-body-center {
+	text-align: center;
+}
+
+.modal-footer {
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+
+.modal-footer .mdlButtons {
+	float: right;
+	margin-right: 5px;
+}
+
+.modal-footer .mdlButtons:last-child {
+	float: right;
+}
+div.order_extra{
+	width: 100%;
+	border: 1px solid #dee2e6;
+}
+td.table_extra_container{
+	background-color: #f7f7f1 !important;
+}
+td.table_extra_container table.table_order_extra{
+
+}
+/*.modal-dialog {*/
+/*	position: relative;*/
+/*	display: table; !* This is important *!*/
+/*	overflow-y: auto;*/
+/*	overflow-x: auto;*/
+/*	min-width: 300px;*/
+/*}*/
+
+/*.modal {*/
+/*	padding: 5px 5px 5px 5px !important;*/
+/*}*/
+/*
+!*region For Form*!
+.form-horizontal .control-label {
+    text-align: left;
+    padding-top: 7px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px !important;
+}
+
+label.content-field {
+    font-weight: normal;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+
+!*endregion*!
+
+label {
+    font-weight: 500 !important;
+    font-size: .85rem;
+}
+
+
+.btn-group .dropdown-menu {
+    padding-top:0px;
+    padding-bottom:0px;
+}
+
+#headerinfo {
+    background-color:aqua;
+}
+
+.br-container {
+    margin: 1px 0px 2px 7.1px;
+}
+#br-container {
+    text-align: right;
+    padding-right: 15px;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+#page-title {
+    color: #FFF;
+    font-weight: bold;
+    background-image: linear-gradient(to left, #f4f6f9, #025c9a, #025c9a, #025c9a);
+    text-transform: uppercase;
+}
+
+!* ========================================================== *!
+!* DATA TABLE *!
+!* ========================================================== *!
+table.dtTables thead tr th{
+    text-align: center !important;
+    padding: .5rem;
+    background-color: #99c0dc;
+}
+
+table.dataTable thead .sorting:before, 
+table.dataTable thead .sorting:after, 
+table.dataTable thead .sorting_asc:before, 
+table.dataTable thead .sorting_asc:after, 
+table.dataTable thead .sorting_desc:before, 
+table.dataTable thead .sorting_desc:after, 
+table.dataTable thead .sorting_asc_disabled:before, 
+table.dataTable thead .sorting_asc_disabled:after, 
+table.dataTable thead .sorting_desc_disabled:before, 
+table.dataTable thead .sorting_desc_disabled:after {
+    bottom: 0.7em;
+}
+div.dataTables_wrapper div.dataTables_paginate {
+    margin-top: -20px !important;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 0px !important;
+}*/
+#exampleModalLabel2nd{
+    font-size: 18px;
+}
+.sidebar-dark-warning .nav-sidebar > .nav-item > .nav-link.active,
+.bg-warning {
+    background-color: #cd6617 !important;
+}
+.navbar-light .navbar-nav .nav-link {
+    /*color: rgba(0,0,0,.5);*/
+    color: #ffffff;
+}

@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+#RewriteCond $1 !^(index\.php|templates|resources|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [QSA,L]
+
+order deny,allow
+deny from all
+allow from 192.168.10.161
+allow from 127.0.0.1
+
+</IfModule>

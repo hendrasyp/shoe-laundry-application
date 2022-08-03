@@ -1,0 +1,11 @@
+#table_order, table_order_extra{
+	width: 100%;
+}
+.table_order_extra tr th,
+#table_order tr th{
+	background-color: slategray;color: #FFFFD5;
+}
+
+div.order_extra{
+
+}

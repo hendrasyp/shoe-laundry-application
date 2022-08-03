@@ -1,0 +1,79 @@
+<?php
+
+class Mvorderheader extends CI_Model {
+
+    var $table = 'v_order_header'; //nama tabel dari database
+    var $column_order = array(null, null, 'order_no', 
+      'order_date', 
+      'cust_name', 
+      'payment_status_text', 'pickup_name', 'order_status_name',null,'employee_name'); //field yang ada di table user
+    var $column_search = array('name'); //field yang diizin untuk pencarian
+    var $order = array('order_date' => 'DESC'); // default order
+
+    public function __construct() {
+        
+    }
+
+    private function _get_datatables_query($where = null) {
+
+        $this->db->from($this->table);
+
+        $i = 0;
+
+        foreach ($this->column_search as $item) { // looping awal
+            if ($_POST['search']['value']) { // jika datatable mengirimkan pencarian dengan metode POST
+
+                if ($i === 0) { // looping awal
+                    $this->db->group_start();
+                    $this->db->like($item, $_POST['search']['value']);
+                } else {
+                    $this->db->or_like($item, $_POST['search']['value']);
+                }
+
+                if (count($this->column_search) - 1 == $i)
+                    $this->db->group_end();
+            }
+            $i++;
+        }
+
+        if (!empty($where)) {
+            if (is_array($where)) {
+                foreach ($where as $key => $w) {
+                    $this->db->where($key, $w);
+                }
+            } else {
+                $this->db->where($where);
+            }
+        }
+
+        if (isset($_POST['order'])) {
+            $this->db->order_by($this->column_order[$_POST['order']['0']['column']], $_POST['order']['0']['dir']);
+        } else if (isset($this->order)) {
+            $order = $this->order;
+            $this->db->order_by(key($order), $order[key($order)]);
+        }
+    }
+
+    function get_datatables($where = null) {
+        $this->_get_datatables_query($where);
+        if ($_POST['length'] != -1)
+            $this->db->limit($_POST['length'], $_POST['start']);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    function count_filtered($where) {
+        $this->_get_datatables_query($where);
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
+
+    public function count_all($where = null) {
+        $this->db->from($this->table);
+        if (!empty($where)){
+            $this->db->where($where);
+        }
+        return $this->db->count_all_results();
+    }
+
+}
