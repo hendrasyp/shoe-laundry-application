@@ -587,8 +587,7 @@ var kinet = {
             }
             return $.ajax({
                 url: destination,
-                data: JSON.parse(JSON.stringify(data)),
-                // data: data,
+                data: data,
                 type: "POST",
                 dataType: "JSON",
                 contentType: "application/json",
