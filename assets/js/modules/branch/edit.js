@@ -3,7 +3,11 @@ $(document).on('click', '#btn_save', function () {
     var form = $("#frm_input").serializeArray();
     var uri = baseurl + "administration/branch/update";
 
-    $.when(kinet.ajax.postSerialize(uri, form, '')).done(function (result) {
+    let postData = {
+        txtCompanyId : formField.getVal('txtCompanyId')
+    };
+
+    $.when(kinet.ajax.postSerialize(uri, postData, '')).done(function (result) {
         if (result.message === kinet.message.success) {
             kinet.notification.show('Company berhasil disimpan', kinet.message.success, pageUri);
         } else {
