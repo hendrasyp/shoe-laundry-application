@@ -39,13 +39,8 @@ class Branch extends MX_Controller {
     }
 
     public function update() {
-        if( $this->request->isAjax() )
-        {
-            var_dump($this->input->post());
-        }
-
         $input = $this->input->post();
-        do_debug($input);
+        do_debug($input, true);
 
         $toInsert = array(
           'name' => $input['txtName'],
