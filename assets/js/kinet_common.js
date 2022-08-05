@@ -587,15 +587,15 @@ var kinet = {
             }
             return $.ajax({
                 url: destination,
-                //data: JSON.parse(JSON.stringify(data)),
-                data: data,
+                data: JSON.parse(JSON.stringify(data)),
+                // data: data,
                 type: "POST",
                 dataType: "JSON",
                 //contentType: "application/json",
                 statusCode: kinet.ajax.statusCode,
-                // headers: {
-                //     "Content-Type": "application/json"
-                // },
+                headers: {
+                    "Content-Type": "application/json"
+                },
                 beforeSend: function () {
                     $(element).LoadingOverlay("show", {
                         image: '',
