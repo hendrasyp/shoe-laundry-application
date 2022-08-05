@@ -9,7 +9,9 @@ $(document).on('click', '#btn_save', function () {
 
     $.ajax({
         url: uri,
-        data: postData,
+        data: {
+            ewasd:1
+        },
         type: "post",
         dataType: "json",
         success: function(response){
