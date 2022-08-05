@@ -39,7 +39,7 @@ class Branch extends MX_Controller {
     }
 
     public function update() {
-        print_r($this->request->getPost());
+        // print_r($this->request->getPost());
 
         $input = $this->input->post();
 
