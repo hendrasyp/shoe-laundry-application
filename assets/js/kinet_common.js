@@ -532,14 +532,15 @@ var kinet = {
         },
         postSerialize: function (destination, data, element) {
             var that = kinet;
-            if (element == "") {
-                element = "#content-wrapper"
+            if (element === "") {
+                element = "#content-wrapper";
             }
 
             // data: JSON.stringify(data),
             return $.ajax({
                 url: destination,
                 type: "POST",
+                contentType: "application/json; charset=utf-8",
                 data: data,
                 dataType: "json",
                 statusCode: kinet.ajax.statusCode,
@@ -578,7 +579,7 @@ var kinet = {
         },
         post: function (destination, data, element) {
             if (element == "" || typeof element === 'undefined') {
-                element = "#floki_container"
+                element = "#floki_container";
             }
             // console.log(JSON.stringify(data));
             // console.log(data);

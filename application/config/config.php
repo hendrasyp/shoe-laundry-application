@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'https://app.sneakerlabsid.com/';
-$config['base_url'] = 'http://localhost.net:8081/';
+$config['base_url'] = 'https://app.sneakerssyndicate.com/';
 
 /*
 |--------------------------------------------------------------------------
