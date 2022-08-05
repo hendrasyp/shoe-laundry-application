@@ -40,31 +40,29 @@ class Branch extends MX_Controller {
 
     public function update() {
         $input = $this->input->post();
-        do_debug($input, true);
-
-        $toInsert = array(
-          'name' => $input['txtName'],
-          'address' => $input['txtAddress'],
-          'phone' => $input['txtPhone'],
-          'email' => $input['txtEmail'],
-          'mapurl' => $input['txtGoogleMap'],
-          'contact_person' => $input['txtContactPerson']
-        );
-
-        $update = $this
-            ->common_model
-            ->table_name(TABLE_COUNTER_LOCATION)
-            ->condition(array('id' => $input['txtCompanyId']))
-            ->data_request($toInsert)
-            ->do_update();
-
-        $response = array('message' => 'success');
-        if ($update == false) {
-            $response = array('message' => 'error', 'message_details' => 'Terdapat kesalahan saat update.');
-        }
-        echo json_encode($response);
-
-
+//        do_debug($input, true);
+//
+//        $toInsert = array(
+//          'name' => $input['txtName'],
+//          'address' => $input['txtAddress'],
+//          'phone' => $input['txtPhone'],
+//          'email' => $input['txtEmail'],
+//          'mapurl' => $input['txtGoogleMap'],
+//          'contact_person' => $input['txtContactPerson']
+//        );
+//
+//        $update = $this
+//            ->common_model
+//            ->table_name(TABLE_COUNTER_LOCATION)
+//            ->condition(array('id' => $input['txtCompanyId']))
+//            ->data_request($toInsert)
+//            ->do_update();
+//
+//        $response = array('message' => 'success');
+//        if ($update == false) {
+//            $response = array('message' => 'error', 'message_details' => 'Terdapat kesalahan saat update.');
+//        }
+        echo json_encode($input);
     }
 
 }
