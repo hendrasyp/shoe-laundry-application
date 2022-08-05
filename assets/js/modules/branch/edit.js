@@ -3,6 +3,20 @@ $(document).on('click', '#btn_save', function () {
     var form = $("#frm_input").serializeArray();
     var uri = baseurl + "administration/branch/update";
 
+    $.ajax({
+        url: uri,
+        method: 'post',
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'Content-Type': 'application/json'
+        },
+        dataType: 'json',
+        data: { emailaddr: "suhendra" },
+        success: function(resp) {
+            console.log(resp);
+        }
+    });
+
     let postData = {
         txtCompanyId : formField.getVal('txtCompanyId')
     };
@@ -10,6 +24,7 @@ $(document).on('click', '#btn_save', function () {
         .done(function( data ) {
             alert( "Data Loaded: " + data );
         });
+    return false;
     // $.ajax({
     //     url: uri,
     //     data: {
