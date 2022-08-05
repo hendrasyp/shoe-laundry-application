@@ -42,6 +42,11 @@ class Branch extends MX_Controller {
         print_r($this->request->getPost());
         //print_r($request->getPost());
         $input = $this->input->post();
+
+        $json = file_get_contents('php://input');
+        $obj = json_decode($json);
+
+        do_debug($obj);
         do_debug($_SERVER["CONTENT_TYPE"]);
 //        do_debug($input, true);
 //
