@@ -41,6 +41,7 @@ class Branch extends MX_Controller {
         $obj = json_decode($json);
         do_debug($obj);
         do_debug($_SERVER["CONTENT_TYPE"]);
+        die();
 //        do_debug($input, true);
 //
 //        $toInsert = array(

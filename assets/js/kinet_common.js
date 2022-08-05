@@ -585,48 +585,48 @@ var kinet = {
             if (element == "" || typeof element === 'undefined') {
                 element = "#floki_container";
             }
-
-            console.log (destination);
-            console.log (data);
-
             return $.ajax({
                 url: destination,
+                //data: JSON.parse(JSON.stringify(data)),
                 data: data,
-                type: "ajax",
-                async : true,
-                contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-                dataType: "json"
-                // beforeSend: function () {
-                //     $(element).LoadingOverlay("show", {
-                //         image: '',
-                //         background: "rgba(255, 255, 255, 0.2)",
-                //         size: "60",
-                //         maxSize: "60",
-                //         minSize: "50",
-                //         fontawesome: 'fa fa-refresh fa-spin'
-                //     });
+                type: "POST",
+                dataType: "JSON",
+                //contentType: "application/json",
+                statusCode: kinet.ajax.statusCode,
+                // headers: {
+                //     "Content-Type": "application/json"
                 // },
-                // complete: function (e) {
-                //     $(element).LoadingOverlay("hide", true);
-                // },
-                // error: function (xhr, ajaxOptions, thrownError) {
-                //     switch (xhr.status) {
-                //         case 404:
-                //             kinet.notification.show("The page you requested not found.", "error", "");
-                //             break;
-                //         case 400:
-                //             kinet.notification.show("Bad Request. Check your parameter request.", "error", "");
-                //             break;
-                //         case 403:
-                //             kinet.notification.show("You don't have authorization to access requested page.", "error", "");
-                //             break;
-                //         case 500:
-                //             kinet.notification.show("Internal server error. Please check the requested page. <br/> Error details: " + xhr.responseText, "error", "");
-                //             break;
-                //
-                //     }
-                //     return false;
-                // }
+                beforeSend: function () {
+                    $(element).LoadingOverlay("show", {
+                        image: '',
+                        background: "rgba(255, 255, 255, 0.2)",
+                        size: "60",
+                        maxSize: "60",
+                        minSize: "50",
+                        fontawesome: 'fa fa-refresh fa-spin'
+                    });
+                },
+                complete: function (e) {
+                    $(element).LoadingOverlay("hide", true);
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    switch (xhr.status) {
+                        case 404:
+                            kinet.notification.show("The page you requested not found.", "error", "");
+                            break;
+                        case 400:
+                            kinet.notification.show("Bad Request. Check your parameter request.", "error", "");
+                            break;
+                        case 403:
+                            kinet.notification.show("You don't have authorization to access requested page.", "error", "");
+                            break;
+                        case 500:
+                            kinet.notification.show("Internal server error. Please check the requested page. <br/> Error details: " + xhr.responseText, "error", "");
+                            break;
+
+                    }
+                    return false;
+                }
             });
         }
     },

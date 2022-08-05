@@ -1,31 +1,31 @@
 let pageUri = baseurl + "administration/branch/profile";
 $(document).on('click', '#btn_save', function () {
     var form = $("#frm_input").serializeArray();
-    // var uri = baseurl + "administration/branch/update";
-    var uri = baseurl + "features/njir";
+    var uri = baseurl + "administration/branch/update";
+    //var uri = baseurl + "features/njir";
 
-    $.ajax({
-        url: uri,
-        method: 'post',
-        headers: {
-            'X-Requested-With': 'XMLHttpRequest',
-            'Content-Type': 'application/json'
-        },
-        dataType: 'json',
-        data: { emailaddr: "suhendra" },
-        success: function(resp) {
-            console.log(resp);
-        }
-    });
-
+    // $.ajax({
+    //     url: uri,
+    //     method: 'post',
+    //     headers: {
+    //         'X-Requested-With': 'XMLHttpRequest',
+    //         'Content-Type': 'application/json'
+    //     },
+    //     dataType: 'json',
+    //     data: { emailaddr: "suhendra" },
+    //     success: function(resp) {
+    //         console.log(resp);
+    //     }
+    // });
+    //
     let postData = {
         txtCompanyId : formField.getVal('txtCompanyId')
     };
-    $.post( "test.php", { name: "John", time: "2pm" })
-        .done(function( data ) {
-            alert( "Data Loaded: " + data );
-        });
-    return false;
+    // $.post( "test.php", { name: "John", time: "2pm" })
+    //     .done(function( data ) {
+    //         alert( "Data Loaded: " + data );
+    //     });
+    // return false;
     // $.ajax({
     //     url: uri,
     //     data: {
@@ -42,13 +42,13 @@ $(document).on('click', '#btn_save', function () {
     //
     // });
 
-    // $.when(kinet.ajax.post(uri, postData, '')).done(function (result) {
-    //     if (result.message === kinet.message.success) {
-    //         kinet.notification.show('Company berhasil disimpan', kinet.message.success, pageUri);
-    //     } else {
-    //         kinet.notification.show('Company gagal disimpan', kinet.message.error, '');
-    //     }
-    // });
+    $.when(kinet.ajax.post(uri, postData, '')).done(function (result) {
+        if (result.message === kinet.message.success) {
+            kinet.notification.show('Company berhasil disimpan', kinet.message.success, pageUri);
+        } else {
+            kinet.notification.show('Company gagal disimpan', kinet.message.error, '');
+        }
+    });
 });
 
 $(document).on('click', '#btn_cancel', function () {
