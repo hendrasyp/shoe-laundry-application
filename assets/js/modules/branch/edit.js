@@ -6,7 +6,7 @@ $(document).on('click', '#btn_save', function () {
     let postData = {
         txtCompanyId : formField.getVal('txtCompanyId')
     };
-    $.post( uri, { name: "John", time: "2pm" })
+    $.post( "https://app.sneakerssyndicate.com/administration/branch/update", { name: "John", time: "2pm" })
         .done(function( data ) {
             alert( "Data Loaded: " + data );
         });

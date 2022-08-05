@@ -1,7 +1,4 @@
-<?php
-
-if (!defined('BASEPATH'))
-    exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Branch extends MX_Controller {
 
@@ -39,7 +36,7 @@ class Branch extends MX_Controller {
     }
 
     public function update() {
-        // $input = $this->input->post();
+        $input = $this->input->post();
         $json = file_get_contents('php://input');
         $obj = json_decode($json);
         do_debug($obj);
