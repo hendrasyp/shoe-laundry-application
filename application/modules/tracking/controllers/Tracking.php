@@ -103,7 +103,7 @@ class Tracking extends MX_Controller
 
 	public function debug_order($id)
 	{
-		do_debug($this->get_order($id));
+		//do_debug($this->get_order($id));
 	}
 
 

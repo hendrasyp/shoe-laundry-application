@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'sneaker_syndicate',
+	'hostname' => 'sneakerssyndicate.com',
+	'username' => 'u1777398_londri',
+	'password' => '8bQ9DYt{gxbqknPHLW',
+	'database' => 'u1777398_apps',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => TRUE,

@@ -2,13 +2,13 @@
 $header = $order["header"];
 $detail = $order["order_detail"];
 $extra_detail = array();
-do_debug($oheader);
+// do_debug($oheader);
 ?>
 
 <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td style="width: 175px;vertical-align: top;">
-			<img style="width:151px;" src="<?= base_url('assets/img/floki-01.png'); ?>"/>
+			<img style="width:151px;" src="<?= base_url('assets/img/logo-login.png'); ?>"/>
 		</td>
 		<td style="width: 150px;vertical-align: top;">
 			<div id="branch_info">
