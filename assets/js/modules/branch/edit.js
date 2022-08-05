@@ -2,22 +2,7 @@ let pageUri = baseurl + "administration/branch/profile";
 $(document).on('click', '#btn_save', function () {
     var form = $("#frm_input").serializeArray();
     var uri = baseurl + "administration/branch/update";
-    //var uri = baseurl + "features/njir";
 
-    // $.ajax({
-    //     url: uri,
-    //     method: 'post',
-    //     headers: {
-    //         'X-Requested-With': 'XMLHttpRequest',
-    //         'Content-Type': 'application/json'
-    //     },
-    //     dataType: 'json',
-    //     data: { emailaddr: "suhendra" },
-    //     success: function(resp) {
-    //         console.log(resp);
-    //     }
-    // });
-    //
     let postData = {
         txtCompanyId : formField.getVal('txtCompanyId')
     };
@@ -42,21 +27,27 @@ $(document).on('click', '#btn_save', function () {
     //
     // });
 
-    $.when(kinet.ajax.postSerialize(uri, postData, '')).done(function (result) {
-        if (result.message === kinet.message.success) {
-            kinet.notification.show('Company berhasil disimpan', kinet.message.success, pageUri);
-        } else {
-            kinet.notification.show('Company gagal disimpan', kinet.message.error, '');
-        }
+    $.post(uri,postData,function (e){
+       console.log(e);
+        $.post(uri,JSON.stringify(postData),function (e){
+            console.log(e);
+        });
+        $.when(kinet.ajax.post(uri, postData, '')).done(function (result) {
+            $.when(kinet.ajax.post(uri, JSON.stringify(postData), '')).done(function (result) {
+
+            });
+
+
+            // if (result.message === kinet.message.success) {
+            //     kinet.notification.show('Company berhasil disimpan', kinet.message.success, pageUri);
+            // } else {
+            //     kinet.notification.show('Company gagal disimpan', kinet.message.error, '');
+            // }
+        });
     });
 
-    $.when(kinet.ajax.post(uri, postData, '')).done(function (result) {
-        if (result.message === kinet.message.success) {
-            kinet.notification.show('Company berhasil disimpan', kinet.message.success, pageUri);
-        } else {
-            kinet.notification.show('Company gagal disimpan', kinet.message.error, '');
-        }
-    });
+
+
 });
 
 $(document).on('click', '#btn_cancel', function () {
