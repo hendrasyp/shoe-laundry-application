@@ -7,7 +7,7 @@ $(document).on('click', '#btn_save', function () {
         txtCompanyId : formField.getVal('txtCompanyId')
     };
 
-    $.when(kinet.ajax.postSerialize(uri, postData, '')).done(function (result) {
+    $.when(kinet.ajax.post(uri, postData, '')).done(function (result) {
         if (result.message === kinet.message.success) {
             kinet.notification.show('Company berhasil disimpan', kinet.message.success, pageUri);
         } else {

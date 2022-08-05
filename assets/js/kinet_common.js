@@ -585,9 +585,6 @@ var kinet = {
             if (element == "" || typeof element === 'undefined') {
                 element = "#floki_container";
             }
-            // console.log(JSON.stringify(data));
-            // console.log(data);
-            // data: JSON.stringify(data),
             return $.ajax({
                 url: destination,
                 //data: JSON.parse(JSON.stringify(data)),
