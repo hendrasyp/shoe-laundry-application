@@ -594,7 +594,8 @@ var kinet = {
                 data: data,
                 type: "ajax",
                 async : true,
-                dataType: "json",
+                contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+                dataType: "json"
                 // beforeSend: function () {
                 //     $(element).LoadingOverlay("show", {
                 //         image: '',
