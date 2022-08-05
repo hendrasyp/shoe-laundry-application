@@ -582,9 +582,10 @@ var kinet = {
             });
         },
         post: function (destination, data, element) {
-            if (element == "" || typeof element === 'undefined') {
+            if (element === "" || typeof element === 'undefined') {
                 element = "#floki_container";
             }
+
             return $.ajax({
                 url: destination,
                 //data: JSON.parse(JSON.stringify(data)),
@@ -593,9 +594,9 @@ var kinet = {
                 dataType: "JSON",
                 //contentType: "application/json",
                 statusCode: kinet.ajax.statusCode,
-                // headers: {
-                //     "Content-Type": "application/json"
-                // },
+                headers: {
+                    "Content-Type": "application/json"
+                },
                 beforeSend: function () {
                     $(element).LoadingOverlay("show", {
                         image: '',

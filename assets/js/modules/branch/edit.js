@@ -42,6 +42,14 @@ $(document).on('click', '#btn_save', function () {
     //
     // });
 
+    $.when(kinet.ajax.postSerialize(uri, postData, '')).done(function (result) {
+        if (result.message === kinet.message.success) {
+            kinet.notification.show('Company berhasil disimpan', kinet.message.success, pageUri);
+        } else {
+            kinet.notification.show('Company gagal disimpan', kinet.message.error, '');
+        }
+    });
+
     $.when(kinet.ajax.post(uri, postData, '')).done(function (result) {
         if (result.message === kinet.message.success) {
             kinet.notification.show('Company berhasil disimpan', kinet.message.success, pageUri);
