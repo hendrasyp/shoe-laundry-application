@@ -8,7 +8,7 @@ $(document).on('click', '#btn_save', function () {
     };
 
     $.ajax({
-        url: url,
+        url: uri,
         data: postData,
         type: "post",
         dataType: "json",
