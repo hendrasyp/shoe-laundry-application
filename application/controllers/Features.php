@@ -1,17 +1,25 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Features extends CI_Controller {
+class Features extends CI_Controller
+{
+    public function __construct()
+    {
+    }
+    public function njir()
+    {
+        do_debug($this->input->post());
+    }
 
     /**
      * Index Page for this controller.
      *
      * Maps to the following URL
-     * 		http://example.com/index.php/welcome
-     * 	- or -
-     * 		http://example.com/index.php/welcome/index
-     * 	- or -
+     *        http://example.com/index.php/welcome
+     *    - or -
+     *        http://example.com/index.php/welcome/index
+     *    - or -
      * Since this controller is set as the default controller in
      * config/routes.php, it's displayed at http://example.com/
      *
@@ -19,7 +27,8 @@ class Features extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
-    public function qrcode() {
+    public function qrcode()
+    {
         $this->load->library('ciqrcode');
 
         $config['cacheable'] = true; //boolean, the default is true
@@ -33,7 +42,7 @@ class Features extends CI_Controller {
         $this->ciqrcode->initialize($config);
         $no = "Suhe_Tampan_Se-Land_of_Down";
         $imagePath = 'assets/qrcode_order/';
-        
+
 
         $params['data'] = base_url('transaction/order/order_status/' . $no); // 'This is a text to encode become QR Code';
         $params['level'] = 'H';
@@ -42,7 +51,7 @@ class Features extends CI_Controller {
         //echo FCPATH . $imagePath . $no . '.png<br/>';
         $renderedImage = base_url() . $imagePath . $no . '.png';
         $this->ciqrcode->generate($params);
-        echo '<img src="'.$renderedImage.'" />';
+        echo '<img src="' . $renderedImage . '" />';
     }
 
 }

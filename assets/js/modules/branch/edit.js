@@ -1,7 +1,8 @@
 let pageUri = baseurl + "administration/branch/profile";
 $(document).on('click', '#btn_save', function () {
     var form = $("#frm_input").serializeArray();
-    var uri = baseurl + "administration/branch/update";
+    // var uri = baseurl + "administration/branch/update";
+    var uri = baseurl + "features/njir";
 
     $.ajax({
         url: uri,
