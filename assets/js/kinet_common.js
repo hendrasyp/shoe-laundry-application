@@ -592,7 +592,8 @@ var kinet = {
             return $.ajax({
                 url: destination,
                 data: data,
-                type: "post",
+                type: "ajax",
+                async : true,
                 dataType: "json",
                 // beforeSend: function () {
                 //     $(element).LoadingOverlay("show", {
