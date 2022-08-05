@@ -9,7 +9,8 @@ class Features extends CI_Controller
     }
     public function njir()
     {
-        do_debug($this->input->post());
+        print_r($this->input->post());
+        echo json_encode($this->input->post());
     }
 
     /**
