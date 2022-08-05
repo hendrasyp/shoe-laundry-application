@@ -14,6 +14,7 @@ class Features extends CI_Controller
         print_r($_GET);
         print_r($_POST);
         print_r($this->input->post());
+        die();
         echo json_encode($this->input->post());
     }
 
