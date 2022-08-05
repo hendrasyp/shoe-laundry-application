@@ -28,26 +28,23 @@ $(document).on('click', '#btn_save', function () {
     // });
 
     $.post(uri,postData,function (e){
-       console.log(e);
+       // console.log(e);
         $.post(uri,JSON.stringify(postData),function (e){
-            console.log(e);
-        });
-        $.when(kinet.ajax.post(uri, postData, '')).done(function (result) {
-            $.when(kinet.ajax.post(uri, JSON.stringify(postData), '')).done(function (result) {
+            //console.log(e);
+            $.when(kinet.ajax.postSerialize(uri, postData, '')).done(function (result) {
+                $.when(kinet.ajax.post(uri, JSON.stringify(postData), '')).done(function (result) {
 
+                });
+
+
+                // if (result.message === kinet.message.success) {
+                //     kinet.notification.show('Company berhasil disimpan', kinet.message.success, pageUri);
+                // } else {
+                //     kinet.notification.show('Company gagal disimpan', kinet.message.error, '');
+                // }
             });
-
-
-            // if (result.message === kinet.message.success) {
-            //     kinet.notification.show('Company berhasil disimpan', kinet.message.success, pageUri);
-            // } else {
-            //     kinet.notification.show('Company gagal disimpan', kinet.message.error, '');
-            // }
         });
     });
-
-
-
 });
 
 $(document).on('click', '#btn_cancel', function () {
