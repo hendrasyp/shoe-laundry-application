@@ -6,22 +6,25 @@ $(document).on('click', '#btn_save', function () {
     let postData = {
         txtCompanyId : formField.getVal('txtCompanyId')
     };
-
-    $.ajax({
-        url: uri,
-        data: {
-            ewasd:1
-        },
-        type: "post",
-        dataType: "json",
-        async : true,
-        contentType:"Content-Type: application/json; charset=UTF-8",
-        // contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-        success: function(response){
-            console.log(response);
-        }
-
-    });
+    $.post( uri, { name: "John", time: "2pm" })
+        .done(function( data ) {
+            alert( "Data Loaded: " + data );
+        });
+    // $.ajax({
+    //     url: uri,
+    //     data: {
+    //         ewasd:1
+    //     },
+    //     type: "post",
+    //     dataType: "json",
+    //     async : true,
+    //     contentType:"Content-Type: application/json; charset=UTF-8",
+    //     // contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+    //     success: function(response){
+    //         console.log(response);
+    //     }
+    //
+    // });
 
     // $.when(kinet.ajax.post(uri, postData, '')).done(function (result) {
     //     if (result.message === kinet.message.success) {
