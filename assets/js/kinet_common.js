@@ -594,37 +594,37 @@ var kinet = {
                 data: data,
                 type: "post",
                 dataType: "json",
-                beforeSend: function () {
-                    $(element).LoadingOverlay("show", {
-                        image: '',
-                        background: "rgba(255, 255, 255, 0.2)",
-                        size: "60",
-                        maxSize: "60",
-                        minSize: "50",
-                        fontawesome: 'fa fa-refresh fa-spin'
-                    });
-                },
-                complete: function (e) {
-                    $(element).LoadingOverlay("hide", true);
-                },
-                error: function (xhr, ajaxOptions, thrownError) {
-                    switch (xhr.status) {
-                        case 404:
-                            kinet.notification.show("The page you requested not found.", "error", "");
-                            break;
-                        case 400:
-                            kinet.notification.show("Bad Request. Check your parameter request.", "error", "");
-                            break;
-                        case 403:
-                            kinet.notification.show("You don't have authorization to access requested page.", "error", "");
-                            break;
-                        case 500:
-                            kinet.notification.show("Internal server error. Please check the requested page. <br/> Error details: " + xhr.responseText, "error", "");
-                            break;
-
-                    }
-                    return false;
-                }
+                // beforeSend: function () {
+                //     $(element).LoadingOverlay("show", {
+                //         image: '',
+                //         background: "rgba(255, 255, 255, 0.2)",
+                //         size: "60",
+                //         maxSize: "60",
+                //         minSize: "50",
+                //         fontawesome: 'fa fa-refresh fa-spin'
+                //     });
+                // },
+                // complete: function (e) {
+                //     $(element).LoadingOverlay("hide", true);
+                // },
+                // error: function (xhr, ajaxOptions, thrownError) {
+                //     switch (xhr.status) {
+                //         case 404:
+                //             kinet.notification.show("The page you requested not found.", "error", "");
+                //             break;
+                //         case 400:
+                //             kinet.notification.show("Bad Request. Check your parameter request.", "error", "");
+                //             break;
+                //         case 403:
+                //             kinet.notification.show("You don't have authorization to access requested page.", "error", "");
+                //             break;
+                //         case 500:
+                //             kinet.notification.show("Internal server error. Please check the requested page. <br/> Error details: " + xhr.responseText, "error", "");
+                //             break;
+                //
+                //     }
+                //     return false;
+                // }
             });
         }
     },
