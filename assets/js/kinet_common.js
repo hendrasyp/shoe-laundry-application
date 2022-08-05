@@ -536,12 +536,16 @@ var kinet = {
                 element = "#content-wrapper";
             }
 
+            console.log(JSON.stringify(data));
+            console.log(data);
+
             // data: JSON.stringify(data),
             return $.ajax({
                 url: destination,
                 method: "POST",
                 contentType: "application/json; charset=utf-8",
                 data: data,
+                cache: false,
                 dataType: "json",
                 statusCode: kinet.ajax.statusCode,
                 beforeSend: function () {
