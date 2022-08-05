@@ -39,13 +39,9 @@ class Branch extends MX_Controller {
     }
 
     public function update() {
-        // print_r($this->request->getPost());
-
         $input = $this->input->post();
-
         $json = file_get_contents('php://input');
         $obj = json_decode($json);
-
         do_debug($obj);
         do_debug($_SERVER["CONTENT_TYPE"]);
 //        do_debug($input, true);
