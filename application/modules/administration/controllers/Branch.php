@@ -40,6 +40,7 @@ class Branch extends MX_Controller {
 
     public function update() {
         $input = $this->input->post();
+        do_debug($_SERVER["CONTENT_TYPE"]);
 //        do_debug($input, true);
 //
 //        $toInsert = array(
