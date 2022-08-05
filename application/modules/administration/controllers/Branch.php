@@ -36,13 +36,14 @@ class Branch extends MX_Controller {
     }
 
     public function update() {
-        print_r("$_REQUEST");
+        echo "<pre>";
+        echo "REQUEST";
         print_r($_REQUEST);
-        print_r("GET");
+        echo "<br/>GET";
         print_r($_GET);
-        print_r("POST");
+        echo "<br/>POST";
         print_r($_POST);
-        print_r("INPUT POST");
+        echo "<br/>INPUT_POST";
         print_r($this->input->post());
         die();
 
