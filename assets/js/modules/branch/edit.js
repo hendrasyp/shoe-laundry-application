@@ -15,7 +15,8 @@ $(document).on('click', '#btn_save', function () {
         type: "post",
         dataType: "json",
         async : true,
-        contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+        contentType:"Content-Type: application/json; charset=UTF-8",
+        // contentType:"application/x-www-form-urlencoded; charset=UTF-8",
         success: function(response){
             console.log(response);
         }
