@@ -591,11 +591,9 @@ var kinet = {
                 // data: data,
                 type: "POST",
                 dataType: "JSON",
-                //contentType: "application/json",
+                contentType: "application/json",
                 statusCode: kinet.ajax.statusCode,
-                headers: {
-                    "Content-Type": "application/json"
-                },
+
                 beforeSend: function () {
                     $(element).LoadingOverlay("show", {
                         image: '',
