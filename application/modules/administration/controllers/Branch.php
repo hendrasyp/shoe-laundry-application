@@ -45,6 +45,7 @@ class Branch extends MX_Controller {
         print_r($_POST);
         echo "<br/>INPUT_POST";
         print_r($this->input->post());
+        echo json_encode($this->input->post());
         die();
 
         $input = $this->input->post();
