@@ -585,16 +585,15 @@ var kinet = {
             if (element == "" || typeof element === 'undefined') {
                 element = "#floki_container";
             }
+
+            console.log (destination);
+            console.log (data);
+
             return $.ajax({
                 url: destination,
                 data: data,
-                type: "POST",
-                dataType: "JSON",
-                contentType: "application/json",
-                statusCode: kinet.ajax.statusCode,
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded"
-                },
+                type: "post",
+                dataType: "json",
                 beforeSend: function () {
                     $(element).LoadingOverlay("show", {
                         image: '',
