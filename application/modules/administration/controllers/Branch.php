@@ -73,7 +73,7 @@ class Branch extends MX_Controller {
         $dump = json_encode($response);
         header('Access-Control-Allow-Origin: *');
         header('Content-type: application/json');
-        echo json_encode($dump);
+        echo $dump;
     }
 
 }
