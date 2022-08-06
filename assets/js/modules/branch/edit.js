@@ -1,6 +1,6 @@
 let pageUri = baseurl + "administration/branch/profile";
 $(document).on('click', '#btn_save', function () {
-    var form = $("#frm_input").serialize();
+    var form = $("#frm_input").serializeArray();
     var uri = baseurl + "administration/branch/update";
 
     $.when(kinet.ajax.post(uri, form, '')).done(function (result) {

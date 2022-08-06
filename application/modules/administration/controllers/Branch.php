@@ -70,6 +70,10 @@ class Branch extends MX_Controller {
         if ($update == false) {
             $response = array('message' => 'error', 'message_details' => 'Terdapat kesalahan saat update.');
         }
+        do_debug($_REQUEST);
+        do_debug($_SERVER["CONTENT_TYPE"]);
+        do_debug($_POST);
+        die();
         $dump = json_encode($response);
         echo $dump;
 //        header('Access-Control-Allow-Origin: *');
