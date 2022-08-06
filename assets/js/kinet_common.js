@@ -3,7 +3,7 @@
 // ======================
 jQuery.extend(jQuery.fn.dataTableExt.oSort, {
     "numeric-comma-pre": function (a) {
-        var x = (a == "-") ? 0 : a.replace(/,/, ".");
+        var x = (a === "-") ? 0 : a.replace(/,/, ".");
         return parseFloat(x);
     },
 
@@ -86,7 +86,7 @@ $.fn.info = function () {
         }
     });
     return data;
-}
+};
 
 $(document).on("click", ".btn-modal-cancel", function (e) {
     e.preventDefault();
@@ -751,12 +751,11 @@ var kinet = {
                 extraTotal: extraTotal,
                 estimateDay: estimateDay,
                 dataCollection: detailOrder
-            }
+            };
             return cart;
-            console.log("CART", cart);
         }
     }
-}
+};
 
 
 function addCommas(nStr) {
