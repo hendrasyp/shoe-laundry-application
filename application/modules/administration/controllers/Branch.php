@@ -71,9 +71,13 @@ class Branch extends MX_Controller {
             $response = array('message' => 'error', 'message_details' => 'Terdapat kesalahan saat update.');
         }
         $dump = json_encode($response);
-        header('Access-Control-Allow-Origin: *');
-        header('Content-type: application/json');
-        echo $dump;
+//        header('Access-Control-Allow-Origin: *');
+//        header('Content-type: application/json');
+//        echo $dump;
+        return $this->output
+            ->set_content_type('application/json')
+            ->set_status_header(500)
+            ->set_output($dump);
     }
 
 }
