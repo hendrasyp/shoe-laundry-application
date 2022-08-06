@@ -70,11 +70,10 @@ class Branch extends MX_Controller {
         if ($update == false) {
             $response = array('message' => 'error', 'message_details' => 'Terdapat kesalahan saat update.');
         }
-//        $xx = json_encode($response);
-//        do_debug($xx);
-//        die();
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode($response);
+        $dump = json_encode($response);
+        header('Access-Control-Allow-Origin: *');
+        header('Content-type: application/json');
+        echo json_encode($dump);
     }
 
 }
