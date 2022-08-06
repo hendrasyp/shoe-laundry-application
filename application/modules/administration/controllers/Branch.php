@@ -36,26 +36,20 @@ class Branch extends MX_Controller {
     }
 
     public function update() {
-        echo "<pre>";
-        echo "REQUEST";
-        print_r($_REQUEST);
-        echo "<br/>GET";
-        print_r($_GET);
-        echo "<br/>POST";
-        print_r($_POST);
-        echo "<br/>INPUT_POST";
-        print_r($this->input->post());
-        echo json_encode($this->input->post());
-        die();
+//        echo "<pre>";
+//        echo "REQUEST";
+//        print_r($_REQUEST);
+//        echo "<br/>GET";
+//        print_r($_GET);
+//        echo "<br/>POST";
+//        print_r($_POST);
+//        echo "<br/>INPUT_POST";
+//        print_r($this->input->post());
+//        echo json_encode($this->input->post());
+//        die();
 
         $input = $this->input->post();
-//        $json = file_get_contents('php://input');
-//        $obj = json_decode($json);
-//        do_debug($obj);
-//        do_debug($_SERVER["CONTENT_TYPE"]);
-//        die();
-//        do_debug($input, true);
-//
+
         $toInsert = array(
           'name' => $input['txtName'],
           'address' => $input['txtAddress'],
@@ -64,6 +58,8 @@ class Branch extends MX_Controller {
           'mapurl' => $input['txtGoogleMap'],
           'contact_person' => $input['txtContactPerson']
         );
+
+        do_debug($toInsert);
 
         $update = $this
             ->common_model
