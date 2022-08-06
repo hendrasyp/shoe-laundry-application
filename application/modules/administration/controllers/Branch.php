@@ -74,8 +74,8 @@ class Branch extends MX_Controller {
 //        do_debug($_SERVER["CONTENT_TYPE"]);
 //        do_debug($_POST);
 //        die();
-        $dump = json_encode($response,true);
-        echo $dump;
+        $dump = json_encode($response,J);
+        echo "Okeee";
 //        header('Access-Control-Allow-Origin: *');
 //        header('Content-type: application/json');
 //        echo $dump;
