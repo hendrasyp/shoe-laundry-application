@@ -4,6 +4,7 @@ $(document).on('click', '#btn_save', function () {
     var uri = baseurl + "administration/branch/update";
 
     $.when(kinet.ajax.post(uri, form, '')).done(function (result) {
+        console.log(result);
         if (result.message === kinet.message.success) {
             kinet.notification.show('Company berhasil disimpan', kinet.message.success, pageUri);
         } else {

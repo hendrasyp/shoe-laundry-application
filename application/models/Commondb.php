@@ -72,15 +72,11 @@ class Commondb extends CI_Model {
     }
 
     public function do_update() {
-//do_debug($this->table_name);
-//do_debug($this->data_field);
-//do_debug($this->data_conditions);
-//die();
+
         if ($this->db->update($this->table_name, $this->data_field, $this->data_conditions)) {
             $this->return = TRUE;
         }
-        var_dump($this->return);
-        die();
+
         return $this->return;
     }
 

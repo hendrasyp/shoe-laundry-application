@@ -70,7 +70,7 @@ class Branch extends MX_Controller {
         if ($update == false) {
             $response = array('message' => 'error', 'message_details' => 'Terdapat kesalahan saat update.');
         }
-        echo json_encode($input);
+        echo json_encode($response);
     }
 
 }
