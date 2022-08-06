@@ -588,8 +588,8 @@ var kinet = {
 
             return $.ajax({
                 url: destination,
-                // contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-                contentType: 'application/json; charset=UTF-8',
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                // contentType: 'application/json; charset=UTF-8',
                 dataType: 'json',
                 method: 'post',
                 data: data,
