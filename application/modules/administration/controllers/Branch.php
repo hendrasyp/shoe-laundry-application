@@ -59,8 +59,6 @@ class Branch extends MX_Controller {
           'contact_person' => $input['txtContactPerson']
         );
 
-        do_debug($toInsert);
-die();
         $update = $this
             ->common_model
             ->table_name(TABLE_COUNTER_LOCATION)
