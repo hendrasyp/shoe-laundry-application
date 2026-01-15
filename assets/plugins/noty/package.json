@@ -83,7 +83,7 @@
     "node-sass": "^4.1.0",
     "postcss-loader": "^1.0.0",
     "pre-commit": "^1.2.2",
-    "prettier-standard": "^3.0.1",
+    "prettier-standard": "^16.4.1",
     "sass-loader": "^4.0.1",
     "standard": "^10.0.2",
     "standard-loader": "^6.0.1",
